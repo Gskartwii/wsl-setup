@@ -1,0 +1,70 @@
+1. Uninstall
+	- 3D Viewer
+	- Calendar
+	- Feedback Hub
+	- Mixed Reality Portal
+	- Office
+	- OneDrive
+	- OneNote
+	- Paint 3D
+	- Skype
+	- Sticky Notes
+	- Tips
+	- Voice Recorder
+	- Weather
+	- Xbox
+2. Explorer -> View -> File name extensions, Hidden items
+3. Win-X -> Windows Powershell:
+	> Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+	> Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+	> scoop install git
+	> scoop bucket add extras
+	> scoop install vivaldi
+	> scoop install wezterm
+	> scoop install peazip
+	> scoop install vlc
+	> scoop install discord
+	> scoop install everything
+4. Right-click on taskbar -> Task Bar Settings -> "Replace Command Prompt..." off
+5.
+	- Unpin Edge, Microsoft Store, Cortana from taskbar.
+	- Unpin everything from Start Menu.
+6. Open Vivaldi.
+	- Pin to taskbar.
+	- Set as default browser.
+	- In Vivaldi, continue, continue, block trackers & ads, continue, continue, continue, finish.
+	- Remove everything from speed dial, set Google as default search engine.
+	- Settings -> Keyboard -> Page -> Focus Address Field: add Alt-D.
+7. Open VLC.
+	- Settings -> Interface -> scroll down -> Set up associations... -> Select everything and apply.
+8. Win-X -> Command Prompt (Admin):
+	%> dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+	%> dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+9. Restart.
+10. https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+11. Win-X -> Command Prompt (Admin):
+	%> wsl --set-default-version 2
+12. https://www.microsoft.com/fi-fi/p/ubuntu-2004-lts/9n6svws3rx71?rtc=1&activetab=pivot:overviewtab
+	- Get, install, launch. (all in Windows Store)
+13. Open Wezterm.
+	- Pin to taskbar.
+	> md %USERPROFILE%\.config\wezterm
+	> copy wezterm.lua %USERPROFILE%\.config\wezterm\wezterm.lua
+	> powershell .\install_sourcecodepro.ps1
+	- Restart wezterm.
+	> wsl
+14. While in wsl on wezterm:
+	$ cd $HOME
+	$ git clone https://github.com/Gskartwii/wsl-setup
+	$ cd wsl-setup
+	$ ./wsl-startup-p1.sh
+	- Press <C-d>
+	> wsl --shutdown
+	> wsl
+	$ cd $HOME/wsl-setup
+	$ ./wsl-startup-p2.sh
+15. Log into GitHub, and add identities if needed.
+	$ ./copy-ssh.sh
+	- Settings -> SSH and GPG keys -> Add SSH key.
+	$ ./copy-gpg.sh
+	- Add this GPG key, too.
