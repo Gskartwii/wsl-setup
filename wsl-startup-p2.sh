@@ -14,7 +14,7 @@ echo
 echo "Installing apt packages"
 sudo apt update
 sudo apt upgrade
-sudo apt install tmux zsh build-essential libncursesw5-dev pkg-config
+sudo apt install tmux zsh build-essential libncursesw5-dev pkg-config fzf
 echo
 
 if [ ! -d "$HOME/.local/bin" ]; then

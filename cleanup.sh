@@ -9,7 +9,7 @@ fi
 if [ -f /etc/resolv.conf ]; then
 	sudo rm /etc/resolv.conf
 fi
-sudo apt purge tmux zsh build-essential libncursesw5-dev pkg-config x11-apps
+sudo apt purge tmux zsh build-essential libncursesw5-dev pkg-config x11-apps fzf
 sudo apt autoremove
 
 rm -rf $HOME/.local/bin $HOME/.z $HOME/.oh-my-zsh $HOME/.config $HOME/.local $HOME/.cargo $HOME/.gpg $HOME/ssh $HOME/kakoune-src
