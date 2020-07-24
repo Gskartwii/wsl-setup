@@ -4,6 +4,8 @@ set -euo pipefail
 echo "Compiling italic terminfo"
 tic terminfo-italic-fix/screen-256color-italic
 tic terminfo-italic-fix/xterm-256color-italic
+tic terminfo-italic-fix/tmux-256color
+tic terminfo-italic-fix/tmux-256color-italic
 echo
 
 echo "Setting up nameserver"

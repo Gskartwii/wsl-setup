@@ -1,6 +1,6 @@
 ZSH=$HOME/.oh-my-zsh
 CASE_SENSITIVE="true"
-export PATH="%HOME/go/bin:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$PATH"
+export PATH="/usr/local/go/bin:$HOME/go/bin:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$PATH"
 export LD_LIBRARY_PATH="$HOME/.local/lib:/usr/local/lib:$LD_LIBRARY_PATH"
 export MANPATH="/usr/local/man/:$HOME.local/share/man/:$MANPATH"
 ZSH_THEME="gnzh"
