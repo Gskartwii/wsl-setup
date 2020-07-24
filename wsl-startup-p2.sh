@@ -51,7 +51,13 @@ if [ ! -f "$HOME/.cargo/bin/cargo" ]; then
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-linux -o $HOME/.local/bin/rust-analyzer
     chmod +x $HOME/.local/bin/rust-analyzer
-    $HOME/.cargo/bin/cargo install voidmap
+
+    # Use my personal fork of voidmap
+    git clone https://github.com/Gskartwii/voidmap $HOME/voidmap-src
+    pushd $HOME/voidmap-src
+    $HOME/.cargo/bin/cargo install
+    popd
+
     $HOME/.cargo/bin/cargo install exa
 fi
 
